@@ -1,0 +1,13 @@
+.attribution {
+  background-color: $dark-desaturated-blue;
+  margin-top: 2vh;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: $slightly-transparent-white-mp;
+  font-size: 11px;
+  text-align: center;
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}

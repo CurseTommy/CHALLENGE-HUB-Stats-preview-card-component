@@ -1,0 +1,26 @@
+@import "_mixins";
+@import "_variables";
+@import "_reset";
+
+// Layout
+
+@import "Layout/header";
+@import "Layout/main";
+@import "Layout/footer";
+@import "_responsiveness";
+
+body {
+  height: 100vh;
+  background-color: $very-dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+img {
+  width: 100%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
