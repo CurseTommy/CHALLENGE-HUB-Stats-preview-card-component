@@ -19,14 +19,85 @@ main {
   display: -ms-flexbox;
   display: flex;
   border-radius: 1rem;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .left-side-of-card-text {
-  width: 50%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5rem 5rem;
+}
+.left-side-of-card-text header, .left-side-of-card-text .card-inner-text, .left-side-of-card-text .stats {
+  margin: 1vh 0;
 }
 
 .right-side-of-card-image {
-  width: 50%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  overflow: hidden;
+}
+.right-side-of-card-image img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+header {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+}
+
+.card-inner-text {
+  font-family: "Inter", sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  line-height: 1.5rem;
+}
+
+.stats {
+  width: 85%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: "Inter", sans-serif;
+}
+.stats div p {
+  margin-top: 1vh;
+  text-transform: uppercase;
+  color: hsla(0deg, 0%, 100%, 0.6);
 }
 
 .attribution {
@@ -42,6 +113,63 @@ main {
   color: hsl(228deg, 45%, 44%);
 }
 
+@media screen and (max-width: 1440px) {
+  .left-side-of-card-text {
+    padding: 2rem;
+  }
+  .stats div {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main {
+    height: 50vh;
+    width: 90vw;
+  }
+  .stats {
+    height: 30%;
+  }
+}
+@media screen and (max-width: 725px) {
+  main {
+    min-height: 90vh;
+    width: 90vw;
+    grid-template-columns: auto;
+    grid-template-rows: 30% 70%;
+  }
+  .left-side-of-card-text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: center;
+    padding: 1rem;
+  }
+  .right-side-of-card-image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: block;
+  }
+  .right-side-of-card-image img {
+    height: 0%;
+    border-start-start-radius: 1rem;
+  }
+  .stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.5rem;
+    width: auto;
+    height: auto;
+  }
+}
 body {
   height: 100vh;
   background-color: hsl(233deg, 47%, 7%);
@@ -59,10 +187,4 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: white;
-}
-
-img {
-  width: 100%;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
 }/*# sourceMappingURL=style.css.map */

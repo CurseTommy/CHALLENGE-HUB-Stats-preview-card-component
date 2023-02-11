@@ -1,4 +1,3 @@
-@import "_mixins";
 @import "_variables";
 @import "_reset";
 
@@ -17,10 +16,4 @@ body {
   align-items: center;
   flex-direction: column;
   color: white;
-}
-
-img {
-  width: 100%;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
 }
